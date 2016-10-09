@@ -1,0 +1,64 @@
+extends layout
+
+block content
+    div#fullpage
+        .section
+            .container
+                div.main.unauth
+                    h1 Travelling made 
+                        span.emph smart
+                        |.
+                    hr
+                    p TravelSmart helps you make informed travel decisions so you can enjoy a safe journey.
+                    a#go-to-app.btn.btn-primary(role='button') Plan your trip
+        .section
+            div#main.text-center
+                div#map.col-xs-7
+                div#sidebar.col-xs-4                    
+                    div#data
+                        ul#data-tabs.nav.nav-tabs.nav-justified
+                            li.active(role='presentation', data-toggle='tab')
+                                a(href='#route') Route
+                            li(role='presentation', data-toggle='tab')
+                                a(href='#weather') Weather
+                            li(role='presentation', data-toggle='tab')
+                                a(href='#viral-threat') Viral Threat
+                        div#route
+                            div#route-error
+                            h1#route-heading Route Info
+                            div#route-info
+                        div#weather
+                            h1#weather-heading 7-Day Forecast
+                            div#orig-weather
+                                div#orig-weather-chart.chart
+                                span.no-info#orig-weather-info Please select an origin location.
+                            div#dest-weather
+                                div#dest-weather-chart.chart
+                                span.no-info#dest-weather-info Please select a destination location.
+                        div#viral-threat
+                        // Button trigger modal
+                        //button.btn.btn-primary(type='button', data-toggle='modal', data-target='#myModal') Launch demo modal
+    div#inputs
+        input#orig-input.controls(type='text', placeholder='Enter an origin')
+        input#dest-input.controls(type='text', placeholder='Enter a destination')
+    div#mode-selector.controls
+        b Mode of Travel: 
+        select#mode
+            option(value='DRIVING') Driving
+            option(value='WALKING') Walking
+            option(value='BICYCLING') Bicycling
+            option(value='TRANSIT') Transit
+
+    // Modal
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                    h4#myModalLabel.modal-title About
+                .modal-body
+                    | ...
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button') Save changes

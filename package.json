@@ -1,0 +1,46 @@
+{
+  "name": "virus-tracker",
+  "version": "1.0.0",
+  "description": "A virus tracker.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackironhack/2016blackironhack-danzheng.git"
+  },
+  "keywords": [
+    "node.js",
+    "d3",
+    "data",
+    "mashup",
+    "ironhack"
+  ],
+  "author": "Dan Zheng <zheng321@purdue.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackironhack/2016blackironhack-danzheng/issues"
+  },
+  "homepage": "https://github.com/blackironhack/2016blackironhack-danzheng#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "errorhandler": "^1.4.3",
+    "express": "^4.14.0",
+    "express-flash": "0.0.2",
+    "identicon.js": "^1.3.0",
+    "jade": "^1.11.0",
+    "lodash": "^4.16.1",
+    "morgan": "^1.7.0",
+    "node-sass-middleware": "^0.9.8",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "validator": "^5.7.0"
+  }
+}

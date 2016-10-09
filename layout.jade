@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='theme-color' content='#58498e')
+        meta(name='csrf-token', content=_csrf)
+        title TravelSmart
+        link(rel='shortcut icon', href='/globe.png')
+        link(rel='stylesheet', type='text/css', href='/css/main.css')
+        if (title=='Home')
+            link(rel='stylesheet', type='text/css' href='/css/lib/jquery.fullPage.css')
+            link(rel='stylesheet', type='text/css' href='/css/lib/c3-0.4.11.min.css')
+
+    if (title=='Home')
+        body.purple
+            include partials/header
+            block content
+            include partials/footer
+        script(src='/js/lib/jquery-2.2.0.min.js')
+        script(src='/js/lib/bootstrap.min.js') 
+        script(src='/js/lib/jquery-ui.min.js')
+        script(src='/js/lib/jquery.fullPage.js')
+        script(src='/js/lib/moment.js')
+        script(src='/js/lib/d3-3.5.17.min.js')
+        script(src='/js/lib/c3-0.4.11.min.js')
+        script(src='/js/main.js')
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB25869j0yLHkbkcxHeWU4njUz_l4Z5fYU&libraries=places&callback=initMap")
+    else
+        body
+            include partials/header
+            block content
+            include partials/footer       
+
+    script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-73888031-5', 'auto');
+        ga('send', 'pageview');
